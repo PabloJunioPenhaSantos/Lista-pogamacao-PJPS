@@ -1,4 +1,4 @@
-   public class AtividadeSala6 {
+public class AtividadeSala6 {
     //Operadores lógicos
     public static void main(String[] args) {
         //OPERADOR E(and): &&
