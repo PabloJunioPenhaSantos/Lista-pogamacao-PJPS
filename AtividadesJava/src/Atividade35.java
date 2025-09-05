@@ -14,4 +14,3 @@ public class Atividade35 {
         System.out.println(n2);
     }
 }
-}
