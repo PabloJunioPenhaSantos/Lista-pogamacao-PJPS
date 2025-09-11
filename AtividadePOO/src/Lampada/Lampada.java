@@ -20,28 +20,58 @@ public class Lampada {
         this.cor = cor;
     }
 
-    public boolean getligar() {
-        return !this.ligada;
+    public String getLigada() {
+       if (this.ligada == true) {
+           return "ligada";
+       } else  {
+           return "desligada";
+       }
     }
 
-    public void setLigada(boolean ligada) {
-        this.ligada = ligada;
+    public void setLigar(boolean ligada) {
+        this.ligada = true;
     }
 
-    public boolean getdesligar() {
-        return this.ligada;
-    }
 
-    public int getBrilho() {
+public void setdesligar(boolean ligada) {
+    this.ligada = false;
+}
+
+
+public int getBrilho() {
         return this.brilho;
     }
+
+    public void setReduzirBrilho(int valor) {
+        if ((this.brilho - valor  )<0) {
+            valor = 0 ;
+            this.brilho = valor;
+        }else  {
+            this.brilho -= valor;
+        }
+
+    }
+
+    public void setAumentarilho(int valor) {
+        if ((this.brilho + valor  )>100) {
+            valor = 100 ;
+            this.brilho = valor;
+        }else  {
+            this.brilho += valor;
+        }
+
+    }
+
 
     public String getcor() {
         return this.cor;
     }
-    public void setBrilho(int brilho) {
-        this.brilho=brilho;
-    }
 
+
+
+    public void falar() {
+        System.out.println("\n  a lampada esta :"+ getLigada()+ "\n seu brilho e : "+getBrilho()+ "\n sua cor e :"+getcor());
+
+    }
 }
 
